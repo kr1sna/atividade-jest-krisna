@@ -33,7 +33,7 @@ describe('Retorno de animais', () => {
         fs.writeFileSync('src/data/animals.json', JSON.stringify(animalData));
     });
 
-    it('deve retornar uma lista com todos os usuários', async () => {
+    it('deve retornar uma lista com todos os animais', async () => {
         const res = await request(app).get('/animais');
         expect(res.status).toBe(200);
         expect(res.body.length).toBe(3);
